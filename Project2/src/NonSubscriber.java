@@ -19,6 +19,7 @@ private boolean nodiscount;
     public void reservedCar(Car c) throws Exception {
         c.resverC();
         this.reservedCar=c;
+         c.setMaximumcap(c.getMaximumcap()-1);
         if (isNodiscount()){
             //car_object.route_object.price - (car_object.route_object.price 0.1)
             this.tripCost=c.getRoute().getTripPrice()-(c.getRoute().getTripPrice()*0.1);
